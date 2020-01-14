@@ -1,0 +1,33 @@
+#######################################
+# Syntax Coloring Map Stubborn_MegaShield
+# by Vinícios Silva
+# 	github: @ViniciosSilva811
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+CosmosNV2	KEYWORD1
+SensorDeLinha	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+ler	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+A1	LITERAL1	Constants
+A2	LITERAL1	Constants
+A3	LITERAL1	Constants
+A4	LITERAL1	Constants
+A5	LITERAL1	Constants
+A6	LITERAL1	Constants
+A7	LITERAL1	Constants
+A8	LITERAL1	Constants
+A9	LITERAL1	Constants
+A10	LITERAL1	Constants
