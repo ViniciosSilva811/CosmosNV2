@@ -10,12 +10,14 @@
 
 CosmosNV2	KEYWORD1
 SensorDeLinha	KEYWORD1
+SensorDeToque	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
 ler	KEYWORD2
+lerEstado	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

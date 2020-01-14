@@ -31,4 +31,15 @@ int SensorDeLinha::ler() {
 	return analogRead(_pino);
 }
 
+// -------------------------------- Classe SensorDeToque ------------------------------------ //
+
+SensorDeToque::SensorDeToque(uint8_t porta) {
+	_porta = porta;
+	pinMode(_porta, INPUT_PULLUP);
+}
+
+boolean SensorDeToque::lerEstado() {
+	return !digitalRead(_porta);
+}
+
 // ---------------------------------------- FIM DO CÓDIGO ----------------------------------- //
