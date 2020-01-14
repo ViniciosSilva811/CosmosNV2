@@ -35,6 +35,8 @@ A7	LITERAL1	Constants
 A8	LITERAL1	Constants
 A9	LITERAL1	Constants
 A10	LITERAL1	Constants
+B	LITERAL1	Constants
+C	LITERAL1	Constants
 L1	LITERAL1	Constants
 L2	LITERAL1	Constants
 L3	LITERAL1	Constants

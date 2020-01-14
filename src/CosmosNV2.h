@@ -35,6 +35,9 @@ Versão: 1.0 Janeiro de 2020
 #define L6 24
 #define L7 22
 
+#define B 18
+#define C 36
+
 // ------------------------------- Classe SensorDeLinha ------------------------------------- //
 
 class SensorDeLinha
