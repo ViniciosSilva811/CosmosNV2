@@ -22,6 +22,8 @@ Versão: 1.0 Janeiro de 2020
 // ----------------------------------- DEPENDÊNCIAS ----------------------------------------- //
 
 #include <Arduino.h>
+#include "deps/Adafruit_VL53L0X/src/Adafruit_VL53L0X.h"
+#include <Wire.h>
 
 // ------------------------------------ CONSTANTES ------------------------------------------ //
 
