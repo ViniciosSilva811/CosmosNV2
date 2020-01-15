@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map Stubborn_MegaShield
+# Syntax Coloring Map CosmosNV2
 # by Vinícios Silva
 # 	github: @ViniciosSilva811
 #######################################
@@ -12,6 +12,7 @@ CosmosNV2	KEYWORD1
 SensorDeLinha	KEYWORD1
 SensorDeToque	KEYWORD1
 SensorDeDistancia	KEYWORD1
+SensorDeCor	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -20,6 +21,7 @@ SensorDeDistancia	KEYWORD1
 ler	KEYWORD2
 lerEstado	KEYWORD2
 iniciar	KEYWORD2
+obterValores	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
@@ -44,3 +46,5 @@ L4	LITERAL1	Constants
 L5	LITERAL1	Constants
 L6	LITERAL1	Constants
 L7	LITERAL1	Constants
+D	LITERAL1	Constants
+E	LITERAL1	Constants
