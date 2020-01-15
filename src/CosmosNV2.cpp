@@ -94,6 +94,8 @@ Versão: 1.0 Janeiro de 2020
 #define TCS34725_BDATAL           (0x1A)    /* Blue channel data */
 // #define TCS34725_BDATAH           (0x1B)
 
+#define BUZZER A0
+
 // ------------------------------- Classe SensorDeLinha ------------------------------------- //
 
 SensorDeLinha::SensorDeLinha(uint8_t pino) {
@@ -318,6 +320,24 @@ void SensorDeCor::obterValores (uint16_t *r, uint16_t *g, uint16_t *b, uint16_t 
       delay(700);
       break;
   }
+}
+
+// ------------------------------------ Classe Buzzer --------------------------------------- //
+
+Buzzer::Buzzer() {
+	pinMode(BUZZER, OUTPUT);
+}
+
+void Buzzer::soar_bipe() {
+	tone(BUZZER, 1000);
+  delay(200);
+  noTone(BUZZER);
+}
+
+void Buzzer::soar_dois_bipes() {
+	soar_bipe();
+	delay(100);
+	soar_bipe();
 }
 
 // ---------------------------------------- FIM DO CÓDIGO ----------------------------------- //

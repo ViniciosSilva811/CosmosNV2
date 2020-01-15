@@ -125,6 +125,16 @@ class SensorDeCor {
   void     enable(void);
 };
 
+// ------------------------------------ Classe Buzzer --------------------------------------- //
+
+class Buzzer
+{
+  public:
+    Buzzer();
+    void soar_bipe();
+    void soar_dois_bipes();
+};
+
 // ------------------------------------------------------------------------------------------ //
 
 #endif

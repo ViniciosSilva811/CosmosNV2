@@ -13,6 +13,7 @@ SensorDeLinha	KEYWORD1
 SensorDeToque	KEYWORD1
 SensorDeDistancia	KEYWORD1
 SensorDeCor	KEYWORD1
+Buzzer	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -22,6 +23,8 @@ ler	KEYWORD2
 lerEstado	KEYWORD2
 iniciar	KEYWORD2
 obterValores	KEYWORD2
+soar_bipe	KEYWORD2
+soar_dois_bipes	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
