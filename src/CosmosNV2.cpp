@@ -30,13 +30,13 @@ Versão: 1.0 Janeiro de 2020
 #define ENDERECO_L6 0x36
 #define ENDERECO_L7 0x37
 
-#define SHUT_L1 23
-#define SHUT_L2 25
-#define SHUT_L3 27
-#define SHUT_L4 29
-#define SHUT_L5 31
-#define SHUT_L6 33
-#define SHUT_L7 35
+#define SHUT_L1 14
+#define SHUT_L2 15
+#define SHUT_L3 16
+#define SHUT_L4 17
+#define SHUT_L5 19
+#define SHUT_L6 24
+#define SHUT_L7 22
 
 #define SDAE 50                                     // Pino SDA do sensor do cor esquerdo
 #define SCLE 52                                     // Pino SCL do sensor de cor esquerdo
