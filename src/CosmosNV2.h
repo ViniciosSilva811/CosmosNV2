@@ -42,6 +42,12 @@ Versão: 1.0 Janeiro de 2020
 #define D 1
 #define E 2
 
+#define M1 1
+#define M2 2
+
+#define PARA_FRENTE 1
+#define PARA_TRAS   2
+
 typedef enum
 {
   TCS34725_INTEGRATIONTIME_2_4MS  = 0xFF,   /**<  2.4ms - 1 cycle    - Max Count: 1024  */
@@ -133,6 +139,23 @@ class Buzzer
     Buzzer();
     void soar_bipe();
     void soar_dois_bipes();
+};
+
+// ------------------------------------- Classe Motor --------------------------------------- //
+
+class Motor
+{
+  public:
+    Motor(uint8_t porta);
+    void configurarVelocidade(uint8_t valor);
+    void girar(uint8_t sentido);
+    void parar();
+
+  private:
+    uint8_t _porta;
+    uint8_t _sentido;
+    uint8_t _velocidade;
+    uint8_t a, b;
 };
 
 // ------------------------------------------------------------------------------------------ //

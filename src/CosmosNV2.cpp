@@ -96,6 +96,14 @@ Versão: 1.0 Janeiro de 2020
 
 #define BUZZER A0
 
+#define PINO_VELOCIDADE_MOTOR_1 7
+#define MOTOR1_A 6
+#define MOTOR1_B 5
+
+#define MOTOR2_A 4
+#define MOTOR2_B 3
+#define PINO_VELOCIDADE_MOTOR_2 2
+
 // ------------------------------- Classe SensorDeLinha ------------------------------------- //
 
 SensorDeLinha::SensorDeLinha(uint8_t pino) {
@@ -338,6 +346,86 @@ void Buzzer::soar_dois_bipes() {
 	soar_bipe();
 	delay(100);
 	soar_bipe();
+}
+
+// ------------------------------------- Classe Motor --------------------------------------- //
+
+Motor::Motor(uint8_t porta) {
+  _porta = porta;
+
+  switch (_porta) {
+	    case M1:
+	      pinMode(MOTOR1_A, OUTPUT);
+	      pinMode(MOTOR1_B, OUTPUT);
+	      pinMode(PINO_VELOCIDADE_MOTOR_1, OUTPUT);
+	      break;
+	    case M2:
+	      pinMode(MOTOR2_A, OUTPUT);
+	      pinMode(MOTOR2_B, OUTPUT);
+	      pinMode(PINO_VELOCIDADE_MOTOR_2, OUTPUT);
+	      break;
+      default:
+        break;
+	}
+
+	configurarVelocidade(100);
+}
+
+void Motor::configurarVelocidade(uint8_t valor) {
+  _velocidade = valor;
+	
+	switch (_porta) {
+	    case M1:
+	      analogWrite(PINO_VELOCIDADE_MOTOR_1, _velocidade);
+	      break;
+	    case M2:
+	      analogWrite(PINO_VELOCIDADE_MOTOR_2, _velocidade);
+	      break;
+	}
+}
+
+void Motor::girar(uint8_t sentido) {
+	_sentido = sentido;
+	
+	switch (_porta) {
+	    case M1:
+	      a = MOTOR1_A; b = MOTOR1_B;
+	      break;
+	    case M2:
+	      a = MOTOR2_A; b = MOTOR2_B;
+	      break;
+	    default:
+	      return;
+	}
+
+	switch (_sentido) {
+	    case PARA_FRENTE:
+	      digitalWrite(a, HIGH);
+	      digitalWrite(b, LOW);
+	      break;
+	    case PARA_TRAS:
+	      digitalWrite(a, LOW);
+	      digitalWrite(b, HIGH);
+	      break;
+			default:
+				break;
+	}
+}
+
+void Motor::parar() {
+	switch (_porta) {
+	    case 1:
+	      a = MOTOR1_A; b = MOTOR1_B;
+	      break;
+	    case 2:
+	      a = MOTOR2_A; b = MOTOR2_B;
+	      break;
+	    default:
+	      return;
+	}
+
+	digitalWrite(a, LOW);
+	digitalWrite(b, LOW);
 }
 
 // ---------------------------------------- FIM DO CÓDIGO ----------------------------------- //
