@@ -30,6 +30,14 @@ Versão: 1.0 Janeiro de 2020
 #define ENDERECO_L6 0x36
 #define ENDERECO_L7 0x37
 
+// #define SHUT_L1 14
+// #define SHUT_L2 15
+// #define SHUT_L3 16
+// #define SHUT_L4 17
+// #define SHUT_L5 19
+// #define SHUT_L6 24
+// #define SHUT_L7 22
+
 #define SHUT_L1 23
 #define SHUT_L2 25
 #define SHUT_L3 27
@@ -38,10 +46,15 @@ Versão: 1.0 Janeiro de 2020
 #define SHUT_L6 33
 #define SHUT_L7 35
 
-#define SDAE 50                                     // Pino SDA do sensor do cor esquerdo
-#define SCLE 52                                     // Pino SCL do sensor de cor esquerdo
-#define SDAD 48                                     // Pino SDA do sensor de cor direito
-#define SCLD 46                                     // Pino SCL do sensor de cor direito
+// #define SDAD 48                                     // Pino SDA do sensor de cor direito
+// #define SCLD 46                                     // Pino SCL do sensor de cor direito
+// #define SDAE 50                                     // Pino SDA do sensor do cor esquerdo
+// #define SCLE 52                                     // Pino SCL do sensor de cor esquerdo
+
+#define SDAE 38                                     // Pino SDA do sensor do cor esquerdo
+#define SCLE 40                                     // Pino SCL do sensor de cor esquerdo
+#define SDAD 42                                     // Pino SDA do sensor de cor direito
+#define SCLD 44                                     // Pino SCL do sensor de cor direito
 
 #define TCS34725_ADDRESS          (0x29)
 
@@ -94,7 +107,7 @@ Versão: 1.0 Janeiro de 2020
 #define TCS34725_BDATAL           (0x1A)    /* Blue channel data */
 // #define TCS34725_BDATAH           (0x1B)
 
-#define BUZZER A0
+#define BUZZER 17 // A0
 
 #define PINO_VELOCIDADE_MOTOR_1 7
 #define MOTOR1_A 6
