@@ -22,9 +22,10 @@ Versão: 1.0 Janeiro de 2020
 // ----------------------------------- DEPENDÊNCIAS ----------------------------------------- //
 
 #include <Arduino.h>
+#include <Wire.h>
+#include <Servo.h>
 #include "deps/Adafruit_VL53L0X/src/Adafruit_VL53L0X.h"
 #include "deps/SoftwareWire/SoftwareWire.h"
-#include <Wire.h>
 
 // ------------------------------------ CONSTANTES ------------------------------------------ //
 
@@ -47,6 +48,12 @@ Versão: 1.0 Janeiro de 2020
 
 #define PARA_FRENTE 1
 #define PARA_TRAS   2
+
+#define S1 12
+#define S2 11
+#define S3 10
+#define S4 9
+#define S5 8
 
 typedef enum
 {
@@ -156,6 +163,19 @@ class Motor
     uint8_t _sentido;
     uint8_t _velocidade;
     uint8_t a, b;
+};
+
+// ----------------------------------- Classe ServoMotor ------------------------------------ //
+
+class ServoMotor
+{
+  public:
+    ServoMotor(uint8_t porta);
+    void anexar(uint8_t porta);
+    void desanexar();
+    void gravar(uint8_t angulo);
+  private:
+    Servo servo;
 };
 
 // ------------------------------------------------------------------------------------------ //

@@ -15,6 +15,7 @@ SensorDeDistancia	KEYWORD1
 SensorDeCor	KEYWORD1
 Buzzer	KEYWORD1
 Motor	KEYWORD1
+ServoMotor	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -29,6 +30,9 @@ soar_dois_bipes	KEYWORD2
 configurarVelocidade	KEYWORD2
 girar	KEYWORD2
 parar	KEYWORD2
+gravar	KEYWORD2
+anexar	KEYWORD2
+desanexar	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
@@ -57,3 +61,8 @@ D	LITERAL1	Constants
 E	LITERAL1	Constants
 M1	LITERAL1	Constants
 M2	LITERAL1	Constants
+S1	LITERAL1	Constants
+S2	LITERAL1	Constants
+S3	LITERAL1	Constants
+S4	LITERAL1	Constants
+S5	LITERAL1	Constants
