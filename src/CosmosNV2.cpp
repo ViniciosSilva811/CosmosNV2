@@ -10,7 +10,7 @@
 
 Author: Vinícios Silva
 Meu GitHub: github.com/ViniciosSilva811
-Versão: 1.0 Janeiro de 2020
+Versão: 2.0 Fevereiro de 2020
 
 */
 

@@ -10,7 +10,7 @@
 
 Author: Vinícios Silva
 Meu GitHub: github.com/ViniciosSilva811
-Versão: 1.0 Janeiro de 2020
+Versão: 2.0 Fevereiro de 2020
 
 */
 
@@ -24,7 +24,7 @@ Versão: 1.0 Janeiro de 2020
 #include <Arduino.h>
 #include <Wire.h>
 #include <Servo.h>
-#include "deps/Adafruit_VL53L0X/src/Adafruit_VL53L0X.h"
+#include "Adafruit_VL53L0X.h"
 #include "deps/SoftwareWire/SoftwareWire.h"
 
 // ------------------------------------ CONSTANTES ------------------------------------------ //
