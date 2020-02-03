@@ -16,6 +16,7 @@ SensorDeCor	KEYWORD1
 Buzzer	KEYWORD1
 Motor	KEYWORD1
 ServoMotor	KEYWORD1
+Monitor	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -33,6 +34,13 @@ parar	KEYWORD2
 gravar	KEYWORD2
 anexar	KEYWORD2
 desanexar	KEYWORD2
+configurarCursor	KEYWORD2
+mostrar	KEYWORD2
+limpar	KEYWORD2
+configurarTamanhoDoTexto	KEYWORD2
+configurarCorDoTexto	KEYWORD2
+escrever	KEYWORD2
+desenharImagem	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
@@ -66,3 +74,6 @@ S2	LITERAL1	Constants
 S3	LITERAL1	Constants
 S4	LITERAL1	Constants
 S5	LITERAL1	Constants
+PRETO	LITERAL1	Constants
+BRANCO	LITERAL1	Constants
+INVERSO	LITERAL1	Constants
