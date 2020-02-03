@@ -459,4 +459,60 @@ void ServoMotor::gravar(uint8_t angulo) {
 	servo.write(angulo);
 }
 
+// ----------------------------------- Classe Monitor --------------------------------------- //
+
+Monitor::Monitor() {
+  display = Adafruit_SSD1306(128, 64, &Wire, 4);
+}
+
+void Monitor::iniciar() {
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+}
+
+void Monitor::configurarCursor(uint16_t x, uint16_t y) {
+  display.setCursor(x, y);
+}
+
+void Monitor::mostrar() {
+  display.display();
+}
+
+void Monitor::limpar() {
+  display.clearDisplay();
+}
+
+void Monitor::configurarTamanhoDoTexto(uint8_t tamanho) {
+  display.setTextSize(tamanho);
+}
+
+void Monitor::configurarCorDoTexto(uint16_t cor) {
+  display.setTextColor(cor);
+}
+
+void Monitor::escrever(const char* texto) {
+  display.print(texto);
+}
+
+void Monitor::escrever(int numero) {
+  display.print(numero);
+}
+
+void Monitor::escrever(float numero) {
+  display.print(numero);
+}
+
+void Monitor::escrever(long numero) {
+  display.print(numero);
+}
+
+void Monitor::escrever(unsigned long numero) {
+  display.print(numero);
+}
+
+void Monitor::desenharImagem(uint16_t x, uint16_t y, const uint8_t imagem[], uint16_t altura, 
+                             uint16_t largura, uint16_t cor) 
+{
+  display.drawBitmap(x, y, imagem, largura, altura, cor);
+}
+
 // ---------------------------------------- FIM DO CÓDIGO ----------------------------------- //

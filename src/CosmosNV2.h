@@ -55,6 +55,10 @@ Versão: 2.0 Fevereiro de 2020
 #define S4 9
 #define S5 8
 
+#define PRETO   0
+#define BRANCO  1
+#define INVERSO 2
+
 typedef enum
 {
   TCS34725_INTEGRATIONTIME_2_4MS  = 0xFF,   /**<  2.4ms - 1 cycle    - Max Count: 1024  */
@@ -176,6 +180,31 @@ class ServoMotor
     void gravar(uint8_t angulo);
   private:
     Servo servo;
+};
+
+// ----------------------------------- Classe Monitor --------------------------------------- //
+
+class Monitor
+{
+  public:
+    Monitor();
+    void iniciar();
+    void configurarCursor(uint16_t x, uint16_t y);
+    void mostrar();
+    void limpar();
+
+    void configurarTamanhoDoTexto(uint8_t tamanho);
+    void configurarCorDoTexto(uint16_t cor);
+    void escrever(const char* texto);
+    void escrever(int numero);
+    void escrever(float numero);
+    void escrever(long numero);
+    void escrever(unsigned long numero);
+
+    void desenharImagem(uint16_t x, uint16_t y, const uint8_t imagem[], uint16_t altura, 
+                        uint16_t largura, uint16_t cor);
+  private:
+    Adafruit_SSD1306 display;
 };
 
 // ------------------------------------------------------------------------------------------ //
