@@ -16,7 +16,7 @@ SensorDeCor	KEYWORD1
 Buzzer	KEYWORD1
 Motor	KEYWORD1
 ServoMotor	KEYWORD1
-Monitor	KEYWORD1
+Tela	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)

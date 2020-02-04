@@ -182,12 +182,12 @@ class ServoMotor
     Servo servo;
 };
 
-// ----------------------------------- Classe Monitor --------------------------------------- //
+// ----------------------------------- Classe Tela --------------------------------------- //
 
-class Monitor
+class Tela
 {
   public:
-    Monitor();
+    Tela();
     void iniciar();
     void configurarCursor(uint16_t x, uint16_t y);
     void mostrar();
