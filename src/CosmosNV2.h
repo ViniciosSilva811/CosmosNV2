@@ -26,6 +26,7 @@ Versão: 2.0 Fevereiro de 2020
 #include <Servo.h>
 #include "Adafruit_VL53L0X.h"
 #include "deps/SoftwareWire/SoftwareWire.h"
+#include "Adafruit_SSD1306.h"
 
 // ------------------------------------ CONSTANTES ------------------------------------------ //
 
