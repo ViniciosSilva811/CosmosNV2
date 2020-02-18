@@ -10,7 +10,7 @@
 
 Author: Vinícios Silva
 Meu GitHub: github.com/ViniciosSilva811
-Versão: 1.0 Janeiro de 2020
+Versão: 2.0 Fevereiro de 2020
 
 */
 
@@ -24,7 +24,7 @@ Versão: 1.0 Janeiro de 2020
 #include <Arduino.h>
 #include <Wire.h>
 #include <Servo.h>
-#include "deps/Adafruit_VL53L0X/src/Adafruit_VL53L0X.h"
+#include "Adafruit_VL53L0X.h"
 #include "deps/SoftwareWire/SoftwareWire.h"
 
 // ------------------------------------ CONSTANTES ------------------------------------------ //
@@ -54,6 +54,10 @@ Versão: 1.0 Janeiro de 2020
 #define S3 10
 #define S4 9
 #define S5 8
+
+#define PRETO   0
+#define BRANCO  1
+#define INVERSO 2
 
 typedef enum
 {
@@ -176,6 +180,31 @@ class ServoMotor
     void gravar(uint8_t angulo);
   private:
     Servo servo;
+};
+
+// ----------------------------------- Classe Tela --------------------------------------- //
+
+class Tela
+{
+  public:
+    Tela();
+    void iniciar();
+    void configurarCursor(uint16_t x, uint16_t y);
+    void mostrar();
+    void limpar();
+
+    void configurarTamanhoDoTexto(uint8_t tamanho);
+    void configurarCorDoTexto(uint16_t cor);
+    void escrever(const char* texto);
+    void escrever(int numero);
+    void escrever(float numero);
+    void escrever(long numero);
+    void escrever(unsigned long numero);
+
+    void desenharImagem(uint16_t x, uint16_t y, const uint8_t imagem[], uint16_t altura, 
+                        uint16_t largura, uint16_t cor);
+  private:
+    Adafruit_SSD1306 display;
 };
 
 // ------------------------------------------------------------------------------------------ //
