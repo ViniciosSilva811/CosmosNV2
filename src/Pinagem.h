@@ -38,3 +38,6 @@
 #define PINO_PORTA_S5 8
 
 #define PINO_ALTO_FALANTE 17
+
+#define PINO_TX 42
+#define PINO_RX 40
