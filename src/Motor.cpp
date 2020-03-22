@@ -6,6 +6,8 @@
 
 // ------------------------------------- Classe Motor --------------------------------------- //
 
+Motor::Motor() {}
+
 Motor::Motor(uint8_t porta) {
   _porta = porta;
 

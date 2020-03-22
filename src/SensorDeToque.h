@@ -6,6 +6,7 @@
 class SensorDeToque
 {
   public:
+    SensorDeToque();
     SensorDeToque(uint8_t porta);
     boolean lerEstado();
   private:

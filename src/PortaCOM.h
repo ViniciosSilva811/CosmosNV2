@@ -8,6 +8,7 @@
 class PortaCOM
 {
   public:
+    PortaCOM();
     void iniciar(long velocidade);
     int disponivel();
     int ler();

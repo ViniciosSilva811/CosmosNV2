@@ -7,6 +7,7 @@
 class ServoMotor
 {
   public:
+    ServoMotor();
     ServoMotor(uint8_t porta);
     void anexar(uint8_t porta);
     void desanexar();
