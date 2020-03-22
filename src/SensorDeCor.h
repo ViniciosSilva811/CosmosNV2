@@ -26,24 +26,24 @@ tcs34725Gain_t;
 // ----------------------------------- Classe SensorDeCor ----------------------------------- //
 
 class SensorDeCor {
- public:
-  SensorDeCor(uint8_t porta);
-  
-  boolean  iniciar(void);
-  void     obterValores(uint16_t *r, uint16_t *g, uint16_t *b, uint16_t *c);
+  public:
+    SensorDeCor();
+    SensorDeCor(uint8_t porta); 
+    boolean  iniciar(void);
+    void     obterValores(uint16_t *r, uint16_t *g, uint16_t *b, uint16_t *c);
 
- private:
-  boolean _tcs34725Initialised;
-  tcs34725Gain_t _tcs34725Gain;
-  tcs34725IntegrationTime_t _tcs34725IntegrationTime; 
-  uint8_t _sdaPin;
-  uint8_t _sclPin;
-  SoftwareWire _i2c;
+  private:
+    boolean _tcs34725Initialised;
+    tcs34725Gain_t _tcs34725Gain;
+    tcs34725IntegrationTime_t _tcs34725IntegrationTime; 
+    uint8_t _sdaPin;
+    uint8_t _sclPin;
+    SoftwareWire _i2c;
 
-  void     setIntegrationTime(tcs34725IntegrationTime_t it);
-  void     setGain(tcs34725Gain_t gain);
-  void     write8 (uint8_t reg, uint32_t value);
-  uint8_t  read8 (uint8_t reg);
-  uint16_t read16 (uint8_t reg);
-  void     enable(void);
+    void     setIntegrationTime(tcs34725IntegrationTime_t it);
+    void     setGain(tcs34725Gain_t gain);
+    void     write8 (uint8_t reg, uint32_t value);
+    uint8_t  read8 (uint8_t reg);
+    uint16_t read16 (uint8_t reg);
+    void     enable(void);
 };

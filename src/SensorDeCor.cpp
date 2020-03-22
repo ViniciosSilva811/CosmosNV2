@@ -57,6 +57,8 @@
 
 // ----------------------------------- Classe SensorDeCor ----------------------------------- //
 
+SensorDeCor::SensorDeCor() {}
+
 SensorDeCor::SensorDeCor(uint8_t porta) 
 {
 	switch (porta) {

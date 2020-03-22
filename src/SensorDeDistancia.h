@@ -7,6 +7,7 @@
 class SensorDeDistancia
 {
   public:
+    SensorDeDistancia();
     SensorDeDistancia(uint8_t porta);
     boolean iniciar();
     int ler();

@@ -6,6 +6,7 @@
 class Motor
 {
   public:
+    Motor();
     Motor(uint8_t porta);
     void configurarVelocidade(uint8_t velocidade);
     void girar(uint8_t sentido);

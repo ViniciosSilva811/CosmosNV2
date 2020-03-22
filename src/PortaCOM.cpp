@@ -4,6 +4,8 @@
 
 // ------------------------------------ Classe PortaCOM ------------------------------------- //
 
+PortaCOM::PortaCOM() {}
+
 void PortaCOM::iniciar(long velocidade) {
   meu_serial.begin(velocidade);
 }
