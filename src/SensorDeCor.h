@@ -10,6 +10,7 @@ typedef enum
   TCS34725_INTEGRATIONTIME_50MS   = 0xEB,   /**<  50ms  - 20 cycles  - Max Count: 20480 */
   TCS34725_INTEGRATIONTIME_101MS  = 0xD5,   /**<  101ms - 42 cycles  - Max Count: 43008 */
   TCS34725_INTEGRATIONTIME_154MS  = 0xC0,   /**<  154ms - 64 cycles  - Max Count: 65535 */
+  TCS34725_INTEGRATIONTIME_308MS  = 308,   /**<  308ms - 128 cycles  - Max Count: 65535 */
   TCS34725_INTEGRATIONTIME_700MS  = 0x00    /**<  700ms - 256 cycles - Max Count: 65535 */
 }
 tcs34725IntegrationTime_t;
