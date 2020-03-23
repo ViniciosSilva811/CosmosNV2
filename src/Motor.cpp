@@ -54,34 +54,8 @@ void Motor::girar(uint8_t sentido) {
 }
 
 void Motor::girar(uint8_t sentido, uint8_t velocidade) {
-	_sentido = sentido;
-  _velocidade = velocidade;
-	
-	switch (_porta) {
-    case M1:
-      a = PINO_MOTOR1_A; b = PINO_MOTOR1_B;
-      break;
-    case M2:
-      a = PINO_MOTOR2_A; b = PINO_MOTOR2_B;
-      break;
-    default:
-      return;
-	}
-
-	switch (_sentido) {
-    case PARA_FRENTE:
-      digitalWrite(a, HIGH);
-      digitalWrite(b, LOW);
-      break;
-    case PARA_TRAS:
-      digitalWrite(a, LOW);
-      digitalWrite(b, HIGH);
-      break;
-    default:
-      break;
-	}
-
-  configurarVelocidade(_velocidade);
+  girar(sentido);
+  configurarVelocidade(velocidade);
 }
 
 void Motor::parar() {
