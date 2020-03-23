@@ -10,23 +10,31 @@ Motor::Motor() {}
 
 Motor::Motor(uint8_t porta) {
   _porta = porta;
+}
 
-  switch (_porta) {
-    case M1:
-      pinMode(PINO_MOTOR1_A, OUTPUT);
-      pinMode(PINO_MOTOR1_B, OUTPUT);
-      pinMode(PINO_VELOCIDADE_MOTOR_1, OUTPUT);
-      break;
-    case M2:
-      pinMode(PINO_MOTOR2_A, OUTPUT);
-      pinMode(PINO_MOTOR2_B, OUTPUT);
-      pinMode(PINO_VELOCIDADE_MOTOR_2, OUTPUT);
-      break;
-    default:
-      break;
-	}
+void Motor::configurarPonteH(uint8_t ponte_h) {
+  _ponte_h = ponte_h;
 
-	configurarVelocidade(75);
+  if (_ponte_h == L298N) {
+    switch (_porta) {
+      case M1:
+        pinMode(L298N_PINO_MOTOR1_A, OUTPUT);
+        pinMode(L298N_PINO_MOTOR1_B, OUTPUT);
+        pinMode(L298N_PINO_VELOCIDADE_MOTOR_1, OUTPUT);
+        break;
+      case M2:
+        pinMode(L298N_PINO_MOTOR2_A, OUTPUT);
+        pinMode(L298N_PINO_MOTOR2_B, OUTPUT);
+        pinMode(L298N_PINO_VELOCIDADE_MOTOR_2, OUTPUT);
+        break;
+      default:
+        break;
+    }
+  }
+
+  else if (_ponte_h == L293D) {
+    
+  }
 }
 
 void Motor::configurarVelocidade(uint8_t velocidade) {
@@ -34,10 +42,10 @@ void Motor::configurarVelocidade(uint8_t velocidade) {
 	
 	switch (_porta) {
     case M1:
-      analogWrite(PINO_VELOCIDADE_MOTOR_1, _velocidade);
+      analogWrite(L298N_PINO_VELOCIDADE_MOTOR_1, _velocidade);
       break;
     case M2:
-      analogWrite(PINO_VELOCIDADE_MOTOR_2, _velocidade);
+      analogWrite(L298N_PINO_VELOCIDADE_MOTOR_2, _velocidade);
       break;
 	}
 }
@@ -47,10 +55,10 @@ void Motor::girar(uint8_t sentido) {
 	
 	switch (_porta) {
     case M1:
-      a = PINO_MOTOR1_A; b = PINO_MOTOR1_B;
+      a = L298N_PINO_MOTOR1_A; b = L298N_PINO_MOTOR1_B;
       break;
     case M2:
-      a = PINO_MOTOR2_A; b = PINO_MOTOR2_B;
+      a = L298N_PINO_MOTOR2_A; b = L298N_PINO_MOTOR2_B;
       break;
     default:
       return;
@@ -76,10 +84,10 @@ void Motor::girar(uint8_t sentido, uint8_t velocidade) {
 	
 	switch (_porta) {
     case M1:
-      a = PINO_MOTOR1_A; b = PINO_MOTOR1_B;
+      a = L298N_PINO_MOTOR1_A; b = L298N_PINO_MOTOR1_B;
       break;
     case M2:
-      a = PINO_MOTOR2_A; b = PINO_MOTOR2_B;
+      a = L298N_PINO_MOTOR2_A; b = L298N_PINO_MOTOR2_B;
       break;
     default:
       return;
