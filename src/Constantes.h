@@ -6,6 +6,11 @@
 
 #define M1 1
 #define M2 2
+#define M3 3
+#define M4 4
+
+#define L298N 2
+#define L293D 4
 
 #define PARA_FRENTE  1
 #define PARA_TRAS    2
