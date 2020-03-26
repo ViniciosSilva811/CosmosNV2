@@ -47,6 +47,8 @@ desenharImagem	KEYWORD2
 # Constants (LITERAL1)
 #######################################
 
+A1	ANALOGICO	Constants
+A2	DIGITAL	Constants
 A1	LITERAL1	Constants
 A2	LITERAL1	Constants
 A3	LITERAL1	Constants

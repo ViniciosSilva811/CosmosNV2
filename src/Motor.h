@@ -1,8 +1,8 @@
 
-#include <Arduino.h>
+#ifndef _Motor_h
+#define _Motor_h
 
-#define L298N 2
-#define L293D 4
+#include <Arduino.h>
 
 // ------------------------------------- Classe Motor --------------------------------------- //
 
@@ -24,3 +24,5 @@ class Motor
     uint8_t _ponte_h;
     uint8_t _velocidade;
 };
+
+#endif

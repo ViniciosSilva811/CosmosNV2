@@ -1,4 +1,7 @@
 
+#ifndef _Pinagem_h
+#define _Pinagem_h
+
 // ------------------------------------------------------------------------------------------ //
 
 #define PINO_SDA_SENSOR_DE_COR_DIREITO    48
@@ -41,10 +44,10 @@
 
 // ------------------------------------------------------------------------------------------ //
 
-#define PINO_LATCH  48
-#define PINO_CLOCK  50
-#define PINO_DATA   52
-#define PINO_ENABLE 54
+#define PINO_LATCH  47
+#define PINO_CLOCK  59
+#define PINO_DATA   51
+#define PINO_ENABLE 53
 
 #define PINO_CI_74HC595_MOTOR_1A 2
 #define PINO_CI_74HC595_MOTOR_1B 3
@@ -78,3 +81,5 @@
 #define PINO_RX 40
 
 // ------------------------------------------------------------------------------------------ //
+
+#endif

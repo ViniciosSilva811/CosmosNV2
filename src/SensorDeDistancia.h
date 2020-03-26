@@ -1,4 +1,7 @@
 
+#ifndef _SensorDeDistancia_h
+#define _SensorDeDistancia_h
+
 #include <Arduino.h>
 #include "Adafruit_VL53L0X.h"
 
@@ -16,3 +19,5 @@ class SensorDeDistancia
     Adafruit_VL53L0X sensor;
     VL53L0X_RangingMeasurementData_t distancia;
 };
+
+#endif

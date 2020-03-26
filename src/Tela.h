@@ -1,4 +1,7 @@
 
+#ifndef _Tela_h
+#define _Tela_h
+
 #include <Arduino.h>
 #include "Adafruit_SSD1306.h"
 
@@ -26,3 +29,5 @@ class Tela
   private:
     Adafruit_SSD1306 display;
 };
+
+#endif

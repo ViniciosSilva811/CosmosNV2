@@ -1,4 +1,7 @@
 
+#ifndef _SensorDeToque_h
+#define _SensorDeToque_h
+
 #include <Arduino.h>
 
 // -------------------------------- Classe SensorDeToque ------------------------------------ //
@@ -12,3 +15,5 @@ class SensorDeToque
   private:
     uint8_t _porta;
 };
+
+#endif

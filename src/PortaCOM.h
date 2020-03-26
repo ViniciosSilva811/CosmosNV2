@@ -1,4 +1,7 @@
 
+#ifndef _PortaCOM_h
+#define _PortaCOM_h
+
 #include <Arduino.h>
 #include <SoftwareSerial.h>
 #include "Pinagem.h"
@@ -10,9 +13,11 @@ class PortaCOM
   public:
     PortaCOM();
     void iniciar(long velocidade);
-    int disponivel();
+    boolean existeDadoDisponivel();
     int ler();
-    void enviar(const char caractere);
+    void enviar(char caractere);
   private:
     SoftwareSerial meu_serial = SoftwareSerial(PINO_RX, PINO_TX);
 };
+
+#endif

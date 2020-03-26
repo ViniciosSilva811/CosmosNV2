@@ -1,4 +1,7 @@
 
+#ifndef _ServoMotor_h
+#define _ServoMotor_h
+
 #include <Arduino.h>
 #include <Servo.h>
 
@@ -15,3 +18,5 @@ class ServoMotor
   private:
     Servo servo;
 };
+
+#endif
