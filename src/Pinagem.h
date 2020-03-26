@@ -31,13 +31,34 @@
 
 // ------------------------------------------------------------------------------------------ //
 
-#define PINO_VELOCIDADE_MOTOR_1   7
-#define PINO_MOTOR1_A             6
-#define PINO_MOTOR1_B             5
+#define PINO_MOTOR_1A_L298N 6
+#define PINO_MOTOR_1B_L298N 5
+#define PINO_MOTOR_2A_L298N 4
+#define PINO_MOTOR_2B_L298N 3
 
-#define PINO_MOTOR2_A             4
-#define PINO_MOTOR2_B             3
-#define PINO_VELOCIDADE_MOTOR_2   2
+#define PINO_VELOCIDADE_MOTOR_1_L298N 7
+#define PINO_VELOCIDADE_MOTOR_2_L298N 2
+
+// ------------------------------------------------------------------------------------------ //
+
+#define PINO_LATCH  48
+#define PINO_CLOCK  50
+#define PINO_DATA   52
+#define PINO_ENABLE 54
+
+#define PINO_CI_74HC595_MOTOR_1A 2
+#define PINO_CI_74HC595_MOTOR_1B 3
+#define PINO_CI_74HC595_MOTOR_2A 1
+#define PINO_CI_74HC595_MOTOR_2B 4
+#define PINO_CI_74HC595_MOTOR_3A 5
+#define PINO_CI_74HC595_MOTOR_3B 7
+#define PINO_CI_74HC595_MOTOR_4A 0
+#define PINO_CI_74HC595_MOTOR_4B 6
+
+#define PINO_VELOCIDADE_MOTOR_1_L293D 7
+#define PINO_VELOCIDADE_MOTOR_2_L293D 6
+#define PINO_VELOCIDADE_MOTOR_3_L293D 5
+#define PINO_VELOCIDADE_MOTOR_4_L293D 4
 
 // ------------------------------------------------------------------------------------------ //
 
